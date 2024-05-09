@@ -1,1 +1,4 @@
-<h1 class="text-green-400">Teste</h1>
+<div>
+  <h1>Teste</h1>
+  <h2>teste</h2>
+</div>
