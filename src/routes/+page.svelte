@@ -1,4 +1,5 @@
-<div>
-  <h1>Teste</h1>
-  <h2>teste</h2>
-</div>
+<script>
+  import Main from "../components/Main.svelte";
+</script>
+
+<Main />
