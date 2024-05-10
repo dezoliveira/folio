@@ -12,16 +12,19 @@
   }
 </script>
 
-<div class="relative flex flex-col max-w=[1400] mx-auto w-full text-sm s:text-base min-h-screen">
-    <div class={"fixed bottom-0 w-full duration-200 flex p-10 z=[10]" + (
-      y > 0 ? 'opacity-full pointer-events-auto' : 'pointer-events-none opacity-0'
+<div class="relative p-4 flex flex-col max-w=[1400] mx-auto w-full text-sm s:text-base min-h-screen">
+    <div class={"fixed bottom-0 w-full duration-200 flex p-10 z=[10]" + 
+    (
+      y > 0 ?
+      " opacity-full pointer-events-auto" 
+      : " pointer-events-none opacity-0"
     )}>
       <button>
-        <i class="fa-solid fa-arrow-up" />
+        <i class="fa-solid fa-arrow-up grid place-items-center aspect-square" />
       </button>
     </div>
-    <Header />
-    <slot />
+    <Header y={y}/>
+      <slot />
     <Footer />
 </div>
 
