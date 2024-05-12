@@ -27,4 +27,25 @@
       <img src={"images/profile.jpg"} alt="Profile pic" class="object-cover z=[2] max-h-[70vh]" />
     </div>
   </section>
+
+  <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
+    <div class="flex flex-col gap-2 text-center">
+      <h6 class="text-lg sm:text-xl md:text-2xl">
+        Um pouco dos meus projetos.
+      </h6>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+        Curiso para <span class="text-violet-400">ver</span> meu
+        trabalho ?
+      </h3>
+    </div>
+    <a
+      href="#"
+      target="_blank"
+      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0
+      -mt-10 hover:border-violet-700 duration-200">
+      <i class="fa-regular fa-circle-play"></i>
+      <p>Ver Github</p>
+    </a>
+
+  </section>
 </main>
