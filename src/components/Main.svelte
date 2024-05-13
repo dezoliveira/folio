@@ -33,7 +33,7 @@
         cursor-pointer"
       >
         <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover: translate-x-full z-0 duration-200"/>
-        <h4 class="relative z-9">Get in touch &rarr;</h4>
+        <h4 class="relative z-9">Contato &rarr;</h4>
       </a>
     </div>
     <div class="relative shadow-2x1 grid place-items-center">
