@@ -7,6 +7,12 @@
     {name: 'Project 0', icon: 'fa-solid fa-lemon'},
   ]
 
+  let benefits = [
+    {name: 'um desenvolvedor front end criativo e detalhista', description: 'HTML, CSS e Javascript são a base de tudo e estou sempre reforçando a minha base.'},
+    {name: 'um frameworkholic', description: 'saber os conceitos de um framework é esscencial para desenvolver o front end de uma aplicação, esse é o meu diferencial.'},
+    {name: 'um ensinador e um aprendiz', description: 'ensinar e aprender são conceitos básicos da vida e eu levo isso sempre comigo.'}
+  ]
+
 </script>
 <main class="flex flex-col flex-1 p-4">
   <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
@@ -79,6 +85,35 @@
         </p>
       </Step>
     </div>
-
+  </section>
+  <section
+    id="about"
+    class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative">
+    <div
+      class="flex flex-col gap-2 text-center relative p-4
+        before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
+        after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 before:bg-violet-700"
+        >
+          <h6 class="text-lg sm:text-xl md:text-2xl">Quer saber mais ?</h6>
+          <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+            Um pouco <span class="text-violet-400"> sobre</span> mim:
+          </h3>
+    </div>
+    <p class="mx-auto font-semibold text-lg sm:text-xl md:text-2xl">Eu sou...</p>
+    <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
+      {#each benefits as benefit, index}
+        <div class="flex gap-6 sm:gap-8">
+          <p class="text-4xl sm:text-5xl md:text-6xl text-slate-50">
+            {index+1}
+          </p>
+          <div class="flex flex-col gap-6 sm:gap-8">
+            <h3 class="text-2xl sm:text-3xl md:text-5xl">
+              <p class="text-violet-400">{benefit.name}</p>
+            </h3>
+            <p class="text-1xl sm:text-2xl md:text-3xl">{benefit.description}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
   </section>
 </main>
