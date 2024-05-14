@@ -1,11 +1,25 @@
 <script>
-	import Footer from "./Footer.svelte";
-import Step from "./Step.svelte";
+  import Step from "./Step.svelte";
 
   let steps = [
-    {name: 'iBula', icon: 'fa-solid fa-prescription-bottle-medical'},
-    {name: 'Project 123', icon: 'fa-solid fa-algolia'},
-    {name: 'Project 0', icon: 'fa-solid fa-lemon'},
+    {
+      name: 'iBula',
+      icon: 'fa-solid fa-prescription-bottle-medical',
+      description: 'Aplicativo para consultas de bulas médicas com barra de pesquisa paginação e detalhes do medicamento e download e visualização da bula feito com',
+      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+    },
+    {
+      name: 'Project 123',
+      icon: 'fa-solid fa-algolia',
+      description: 'App para lorem ipsum',
+      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+    },
+    {
+      name: 'Project 0',
+      icon: 'fa-solid fa-lemon',
+      description: 'App para lorem ipsum',
+      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+    },
   ]
 
   let benefits = [
@@ -61,30 +75,16 @@ import Step from "./Step.svelte";
       <p>Ver Github</p>
     </a>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      <Step step={steps[0]}>
-        <p class="font-medium text-xl sm:text-1xl md:text-2xl">Aplicativo para consultas de bulas médicas com barra de pesquisa, 
-          paginação e detalhes do medicamento e download e visualização da bula feito com 
-          <strong class="text-violet-400">
-            ReactJS, NextJS, Bootstrap e Firebase. 
-          </strong>
-        </p>
-      </Step>
-      <Step step={steps[1]}>
-        <p class="font-medium text-xl sm:text-1xl md:text-2xl">Aplicativo para consultas de bulas médicas com barra de pesquisa, 
-          paginação e detalhes do medicamento e download e visualização da bula feito com 
-          <strong class="text-violet-400">
-            ReactJS, NextJS, Bootstrap e Firebase. 
-          </strong>
-        </p>
-      </Step>
-      <Step step={steps[2]}>
-        <p class="font-medium text-xl sm:text-1xl md:text-2xl">Aplicativo para consultas de bulas médicas com barra de pesquisa, 
-          paginação e detalhes do medicamento e download e visualização da bula feito com 
-          <strong class="text-violet-400">
-            ReactJS, NextJS, Bootstrap e Firebase. 
-          </strong>
-        </p>
-      </Step>
+      {#each steps as step}
+        <Step step={step}>
+          <p class="font-medium text-xl sm:text-1xl md:text-2xl">
+            {step.description}
+            <strong class="text-violet-400">
+              {step.stacks} 
+            </strong>
+          </p>
+        </Step>
+      {/each}
     </div>
   </section>
   <section
