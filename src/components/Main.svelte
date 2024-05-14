@@ -1,5 +1,6 @@
 <script>
-	import Step from "./Step.svelte";
+	import Footer from "./Footer.svelte";
+import Step from "./Step.svelte";
 
   let steps = [
     {name: 'iBula', icon: 'fa-solid fa-prescription-bottle-medical'},
