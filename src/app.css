@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar {
+  @apply rounded-md
+}
+
 html {
   scroll-behavior: smooth;
 }
