@@ -45,7 +45,7 @@
       </button>
     </div>
     <div class="relative shadow-2x1 grid place-items-center">
-      <img src={"images/profile.jpg"} alt="Profile pic" class="object-cover z=[2] max-h-[70vh]" />
+      <img src={"images/profile.jpg"} alt="Profile pic" class="object-cover z=[2] w-[50vh] h-[50vh] rounded-full" />
     </div>
   </section>
 

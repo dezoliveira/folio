@@ -8,7 +8,7 @@ export default {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "dracula", "black", "cyberpunk"],
+    themes: ["light", "dark", "cupcake", "dracula", "black", "cyberpunk", "forest"],
   },
 
 };

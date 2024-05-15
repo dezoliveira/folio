@@ -3,9 +3,9 @@
 	import Footer from "../components/Footer.svelte";
 	import Header from "../components/Header.svelte";
 
-  let y = 0
-  let innerHeight = 0
-  let innerWidth = 0
+  $:y = 0
+  $: innerHeight = 0
+  $: innerWidth = 0
 
   function goTop() {
     document.body.scrollIntoView()
@@ -19,7 +19,7 @@
       " opacity-full pointer-events-auto" 
       : " pointer-events-none opacity-0"
     )}>
-      <button>
+      <button on:click={goTop}>
         <i class="fa-solid fa-arrow-up grid place-items-center aspect-square" />
       </button>
     </div>
