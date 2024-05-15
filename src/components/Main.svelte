@@ -29,8 +29,8 @@
   ]
 
 </script>
-<main class="flex flex-col flex-1 p-4">
-  <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 p-0 p-4">
+<main class="flex flex-col flex-1 sm:p-10 p-4">
+  <section id="introPage" class="sm:h-[80vh] grid place-items-center grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-0">
     <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
       <h2 class="font-semibold text-4xl smm:text-5xl md:text-6xl">
         Olá! Sou <span class="text-violet-400">Andres</span> Oliveira <br/>

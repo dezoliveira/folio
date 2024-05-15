@@ -10,7 +10,7 @@
   ]
 
 </script>
-<header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + 
+<header class={"sticky d-block z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + 
   (
     isRolling ?
       " navbar py-4 bg-primary text-primary-content"
