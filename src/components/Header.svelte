@@ -21,7 +21,7 @@
   </h1>
   <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
     {#each tabs as tab}
-      <a  href={tab.link} class={"duration-200 hover:" + (isRolling ? "text-slate-50" : "text-violet-400")}>
+      <a  href={tab.link} class={"duration-200" + (isRolling ? " hover:text-slate-50 font-bold" : " hover:text-violet-400")}>
         <p>{tab.name}</p>
       </a>
     {/each}

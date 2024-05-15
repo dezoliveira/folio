@@ -40,16 +40,9 @@
         Minha <span class="text-violet-400">linguagem principal é</span> Javascript <br/>
         Frameworks e Libraries: <span class="text-violet-400">ReactJS, VueJS, NextJS e Svelte.</span>
       </p>
-      <a
-        href="#"
-        target="_blank"
-        class="hover:bg-violet-400 hover:opacity-100 blueShadow mx-auto lg:mr-auto text-base sm:text-lg md:text-xl
-        relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950
-        cursor-pointer"
-      >
-        <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover: translate-x-full z-0 duration-200"/>
-        <h4 class="relative z-9">Contato &rarr;</h4>
-      </a>
+      <button class="btn btn-primary mx-auto lg:text-2xl md:text-2xl sm:text-3xl">
+        Contato
+      </button>
     </div>
     <div class="relative shadow-2x1 grid place-items-center">
       <img src={"images/profile.jpg"} alt="Profile pic" class="object-cover z=[2] max-h-[70vh]" />
@@ -62,7 +55,7 @@
         Um pouco dos meus projetos.
       </h6>
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Curiso para <span class="text-violet-400">ver</span> meu
+        Curioso para <span class="text-violet-400">ver</span> meu
         trabalho ?
       </h3>
     </div>
