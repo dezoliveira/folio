@@ -30,7 +30,7 @@
 
 </script>
 <main class="flex flex-col flex-1 p-4">
-  <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
+  <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 p-0 p-4">
     <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
       <h2 class="font-semibold text-4xl smm:text-5xl md:text-6xl">
         Olá! Sou <span class="text-violet-400">Andres</span> Oliveira <br/>
@@ -49,7 +49,7 @@
     </div>
   </section>
 
-  <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
+  <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24 p-4">
     <div class="flex flex-col gap-2 text-center">
       <h6 class="text-lg sm:text-xl md:text-2xl">
         Um pouco dos meus projetos.

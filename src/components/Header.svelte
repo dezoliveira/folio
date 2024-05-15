@@ -13,8 +13,8 @@
 <header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + 
   (
     isRolling ?
-      " navbar bg-primary text-primary-content"
-      : " py-0 bg-transparent border-transparent "
+      " navbar py-4 bg-primary text-primary-content"
+      : " py-4 bg-transparent border-transparent "
   )}>
   <h1 class="font-medium">
     <b class="font-bold">Andres</b>
