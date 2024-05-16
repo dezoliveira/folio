@@ -45,7 +45,7 @@
       </button>
     </div>
     <div class="relative shadow-2x1 grid place-items-center">
-      <img src={"images/profile.jpg"} alt="Profile pic" class="object-cover z=[2] w-[50vh] h-[50vh] rounded-full" />
+      <img src={"images/profile.png"} alt="Profile pic" class="object-cover z=[2] w-[50vh] h-[50vh] rounded-full" />
     </div>
   </section>
 
@@ -82,7 +82,7 @@
   </section>
   <section
     id="about"
-    class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative">
+    class="py-20 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative">
     <div
       class="flex flex-col gap-2 text-center relative p-4
         before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
