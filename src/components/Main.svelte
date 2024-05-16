@@ -9,16 +9,34 @@
       stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
     },
     {
-      name: 'Project 123',
-      icon: 'fa-solid fa-algolia',
-      description: 'App para lorem ipsum',
-      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+      name: 'Vue Souls',
+      icon: 'fa-solid fa-khanda',
+      description: 'Aplicativo que utiliza uma API pública de armas do jogo Dark Souls. O app também utiliza o ChartJS para exibir gráficos. Feito com',
+      stacks: 'VueJS, ChartJS.'
     },
     {
-      name: 'Project 0',
-      icon: 'fa-solid fa-lemon',
-      description: 'App para lorem ipsum',
-      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+      name: 'Love Calculator',
+      icon: 'fa-solid fa-heart',
+      description: 'Love Calculator é um projeto que utiliza uma API pública que calcula a combinação de duas pessoas através do seus nomes. Feito com',
+      stacks: ' HTML, CSS e Javascript'
+    },
+    {
+      name: 'JS Calendar',
+      icon: 'fa-solid fa-calendar',
+      description: 'JSCalendar é um projeto de agendamento que utiliza um calendário para reservar horários e dias em poucos cliques. O app utiliza o local storage para reservar os agendamentos. Feito com',
+      stacks: 'HTML, CSS e Javascript.'
+    },
+    {
+      name: 'Flexblog',
+      icon: 'fa-solid fa-blog',
+      description: 'Flexblog é um projeto que utiliza vários conceitos do Flexbox (CSS) como orientações, alinhamentos, crescimento e alocação dos blocos. Feito com',
+      stacks: 'HTML, CSS e Javascript.'
+    },
+    {
+      name: 'Javascript Form',
+      icon: 'fa-solid fa-file-lines',
+      description: 'Javascript Form é um formulário que valida em tempo real se os campos preenchidos são válidos ou não. Foi o projeto que me fez entrar na área. Feito com',
+      stacks: 'HTML, CSS e Javascript.'
     },
   ]
 

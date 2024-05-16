@@ -9,8 +9,8 @@
   group cursor-pointer hover:border-violet-400 duration-200"
 >
   <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl
-  -mt-10 sm:mt-12 md:-mt-12 lg:-mt-16 mx-auto duration-200">
-    <i class={step.icon} />
+  -mt-10 sm:mt-12 md:-mt-12 lg:-mt-16 mx-auto duration-200 p-4 rounded-full">
+    <i class="{step.icon}" />
   </div>
   <h3 class="font-medium text-2xl sm:text-2xl md:text-3xl">
     {step.name}
