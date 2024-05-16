@@ -6,44 +6,56 @@
       name: 'iBula',
       icon: 'fa-solid fa-prescription-bottle-medical',
       description: 'Aplicativo para consultas de bulas médicas com barra de pesquisa paginação e detalhes do medicamento e download e visualização da bula feito com',
-      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.'
+      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.',
+      production: "https://ibula.vercel.app",
+      github: "https://github.com/dezoliveira/ibula"
     },
     {
       name: 'Vue Souls',
       icon: 'fa-solid fa-khanda',
       description: 'Aplicativo que utiliza uma API pública de armas do jogo Dark Souls. O app também utiliza o ChartJS para exibir gráficos. Feito com',
-      stacks: 'VueJS, ChartJS.'
+      stacks: 'VueJS, ChartJS.',
+      production: "https://dezoliveira.github.io/vuesouls/",
+      github: "https://github.com/dezoliveira/vuesouls"
     },
     {
       name: 'Love Calculator',
       icon: 'fa-solid fa-heart',
       description: 'Love Calculator é um projeto que utiliza uma API pública que calcula a combinação de duas pessoas através do seus nomes. Feito com',
-      stacks: ' HTML, CSS e Javascript'
+      stacks: ' HTML, CSS e Javascript',
+      production: "https://dezoliveira.github.io/love-calculator/",
+      github: "https://github.com/dezoliveira/love-calculator"
     },
     {
       name: 'JS Calendar',
       icon: 'fa-solid fa-calendar',
       description: 'JSCalendar é um projeto de agendamento que utiliza um calendário para reservar horários e dias em poucos cliques. O app utiliza o local storage para reservar os agendamentos. Feito com',
-      stacks: 'HTML, CSS e Javascript.'
+      stacks: 'HTML, CSS e Javascript.',
+      production: "https://dezoliveira.github.io/JSCalendar/",
+      github: "https://github.com/dezoliveira/JSCalendar"
     },
     {
       name: 'Flexblog',
       icon: 'fa-solid fa-blog',
       description: 'Flexblog é um projeto que utiliza vários conceitos do Flexbox (CSS) como orientações, alinhamentos, crescimento e alocação dos blocos. Feito com',
-      stacks: 'HTML, CSS e Javascript.'
+      stacks: 'HTML, CSS e Javascript.',
+      production: "https://dezoliveira.github.io/flexblog/",
+      github: "https://github.com/dezoliveira/flexblog"
     },
     {
       name: 'Javascript Form',
       icon: 'fa-solid fa-file-lines',
       description: 'Javascript Form é um formulário que valida em tempo real se os campos preenchidos são válidos ou não. Foi o projeto que me fez entrar na área. Feito com',
-      stacks: 'HTML, CSS e Javascript.'
+      stacks: 'HTML, CSS e Javascript.',
+      production: "https://dezoliveira.github.io/javascriptform/",
+      github: "https://github.com/dezoliveira/javascriptform"
     },
   ]
 
   let benefits = [
     {name: 'um desenvolvedor front end criativo e detalhista', description: 'HTML, CSS e Javascript são a base de tudo e estou sempre reforçando a minha base.'},
     {name: 'um frameworkholic', description: 'saber os conceitos de um framework é esscencial para desenvolver o front end de uma aplicação, esse é o meu diferencial.'},
-    {name: 'um ensinador e um aprendiz', description: 'ensinar e aprender são conceitos básicos da vida e eu levo isso sempre comigo.'}
+    {name: 'um ensinador e um aprendiz', description: 'ensinar e aprender são conceitos básicos da vida e eu levo isso sempre comigo.'},
   ]
 
 </script>
@@ -58,9 +70,11 @@
         Minha <span class="text-violet-400">linguagem principal é</span> Javascript <br/>
         Frameworks e Libraries: <span class="text-violet-400">ReactJS, VueJS, NextJS e Svelte.</span>
       </p>
-      <button class="btn btn-primary mx-auto lg:text-2xl md:text-2xl sm:text-3xl">
-        Contato
-      </button>
+      <a href="https://api.whatsapp.com/send?phone=+5519992282130&text=Olá Andrés!" target="_blank">
+        <button class="btn btn-primary mx-auto lg:text-2xl md:text-2xl sm:text-3xl">
+          Contato
+        </button>
+      </a>
     </div>
     <div class="relative shadow-2x1 grid place-items-center">
       <img src={"images/profile.png"} alt="Profile pic" class="object-cover z=[2] w-[50vh] h-[50vh] rounded-full" />
@@ -78,12 +92,14 @@
       </h3>
     </div>
     <a
-      href="#"
+      href="https://www.github.com/dezoilveira"
       target="_blank"
-      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0
-      -mt-10 hover:border-violet-700 duration-200">
-      <i class="fa-regular fa-circle-play"></i>
-      <p>Ver Github</p>
+      class="mx-auto px-4 py-2 flex items-center gap-2 -mb-4 sm:-mb-0
+      -mt-10 ">
+      <button class="btn btn-primary">
+        <i class="fa-brands fa-github-alt text-3xl"></i>
+        Ver Github
+      </button>
     </a>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
       {#each steps as step}

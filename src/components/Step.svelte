@@ -1,12 +1,11 @@
 <script>
   export let step
 </script>
-
 <a
   href={step.href}
   target="_blank"
-  class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center
-  group cursor-pointer hover:border-violet-400 duration-200"
+  class="p-4 sm:p-6 md:p-8 flex flex-col justify-between gap-4 rounded-lg border border-solid border-violet-700 text-center
+  group cursor-pointer hover:border-violet-400 duration-200 min-h[450px] max-h[450px]"
 >
   <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl
   -mt-10 sm:mt-12 md:-mt-12 lg:-mt-16 mx-auto duration-200 p-4 rounded-full">
@@ -16,14 +15,13 @@
     {step.name}
   </h3>
   <slot/>
-  <div class="flex-1 flex justify-between gap-4 items-center">
-    <div
-      class="ml-auto cursor-pointer hover:text-slate-950 duration-200
-      relative after:absolute after:top-0 after:h-0 after:right-full
-      after:w-full after:h-full after:bg-white after:duration-200
-      hover:after:translate-x-full after:z-[-1] overflow-hidden"
-    >
-      <p class="relative z-4">Ir para &rarr;</p>
-    </div>
+  <div class="flex-1 flex justify-center gap-2 items-center">
+    <a href={step.production} target="_blank">
+      <button class="btn btn-primary">Live</button>
+    </a>
+    <a href={step.github} target="_blank">
+      <button class="btn btn-outline btn-secondary">Code</button>
+    </a>
+      
   </div>
 </a>
