@@ -4,8 +4,8 @@
 <a
   href={step.href}
   target="_blank"
-  class="p-4 sm:p-6 md:p-8 flex flex-col justify-between gap-4 rounded-lg border border-solid border-violet-700 text-center
-  group cursor-pointer hover:border-violet-400 duration-200 min-h[450px] max-h[450px]"
+  class="p-4 sm:p-6 md:p-8 flex flex-col justify-between gap-4 rounded-lg border border-solid border-primary text-center
+  group cursor-pointer hover:border-secondary duration-200 min-h[450px] max-h[450px]"
 >
   <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl
   -mt-10 sm:mt-12 md:-mt-12 lg:-mt-16 mx-auto duration-200 p-4 rounded-full">

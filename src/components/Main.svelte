@@ -63,12 +63,12 @@
   <section id="introPage" class="sm:h-[80vh] grid place-items-center grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-0">
     <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
       <h2 class="font-semibold text-4xl smm:text-5xl md:text-6xl">
-        Olá! Sou <span class="text-violet-400">Andres</span> Oliveira <br/>
-        Dev <span class="text-violet-400">Front End</span>
+        Olá! Sou <span class="text-primary">Andres</span> Oliveira <br/>
+        Dev <span class="text-primary">Front End</span>
       </h2>
       <p class="text-base sm:text-lg md:text-xl">
-        Minha <span class="text-violet-400">linguagem principal é</span> Javascript <br/>
-        Frameworks e Libraries: <span class="text-violet-400">ReactJS, VueJS, NextJS e Svelte.</span>
+        Minha <span class="text-primary">linguagem principal é</span> Javascript <br/>
+        Frameworks e Libraries: <span class="text-primary">ReactJS, VueJS, NextJS e Svelte.</span>
       </p>
       <a href="https://api.whatsapp.com/send?phone=+5519992282130&text=Olá Andrés!" target="_blank">
         <button class="btn btn-primary mx-auto lg:text-2xl md:text-2xl sm:text-3xl">
@@ -87,7 +87,7 @@
         Um pouco dos meus projetos.
       </h6>
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Curioso para <span class="text-violet-400">ver</span> meu
+        Curioso para <span class="text-primary">ver</span> meu
         trabalho ?
       </h3>
     </div>
@@ -106,7 +106,7 @@
         <Step step={step}>
           <p class="font-medium text-xl sm:text-1xl md:text-2xl">
             {step.description}
-            <strong class="text-violet-400">
+            <strong class="text-primary">
               {step.stacks} 
             </strong>
           </p>
@@ -119,12 +119,12 @@
     class="py-20 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative">
     <div
       class="flex flex-col gap-2 text-center relative p-4
-        before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
-        after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 before:bg-violet-700"
+        before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-primary
+        after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 before:bg-primary"
         >
           <h6 class="text-lg sm:text-xl md:text-2xl">Quer saber mais ?</h6>
           <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-            Um pouco <span class="text-violet-400"> sobre</span> mim:
+            Um pouco <span class="text-primary"> sobre</span> mim:
           </h3>
     </div>
     <p class="mx-auto font-semibold text-lg sm:text-xl md:text-2xl">Eu sou...</p>
@@ -136,7 +136,7 @@
           </p>
           <div class="flex flex-col gap-6 sm:gap-8">
             <h3 class="text-2xl sm:text-3xl md:text-5xl">
-              <p class="text-violet-400">{benefit.name}</p>
+              <p class="text-primary">{benefit.name}</p>
             </h3>
             <p class="text-1xl sm:text-2xl md:text-3xl">{benefit.description}</p>
           </div>

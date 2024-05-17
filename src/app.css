@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar {
-  @apply rounded-md
+  @apply rounded-md;
 }
 
 html {
