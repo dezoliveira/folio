@@ -4,9 +4,9 @@
   $:isRolling = y > 0
 
   let tabs = [
-    {name :'Home', link: '#'},
-    {name: 'Projects', link: '#projects'},
-    {name: 'About me', link: '#about'},
+    {name :'Inicio', link: '#'},
+    {name: 'Projetos', link: '#projects'},
+    {name: 'README', link: '#about'},
   ]
 
 </script>
