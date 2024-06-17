@@ -11,6 +11,22 @@
       github: "https://github.com/dezoliveira/ibula"
     },
     {
+      name: 'Harpia Countries',
+      icon: 'fa-solid fa-map-location-dot',
+      description: 'Aplicativo para consultas de países no Google Maps e marcadores indicando cada país pesquisado, feito com',
+      stacks: 'VueJS, Vuex e Bootstrap.',
+      production: "https://harpia-countries.vercel.app",
+      github: "https://github.com/dezoliveira/harpia-countries"
+    },
+    {
+      name: 'Kompass',
+      icon: 'fa-regular fa-compass',
+      description: 'Aplicativo para consultas de usuários presentes em deterinado local no mapa, com uma listagem de usuários e um mapa do Google Maps. Feito com',
+      stacks: 'ReactJS e Tailwind CSS.',
+      production: "https://kompass-beige.vercel.app/",
+      github: "https://github.com/dezoliveira/kompass"
+    },
+    {
       name: 'Vue Souls',
       icon: 'fa-solid fa-khanda',
       description: 'Aplicativo que utiliza uma API pública de armas do jogo Dark Souls. O app também utiliza o ChartJS para exibir gráficos. Feito com',
