@@ -1,72 +1,41 @@
 <script>
   import Step from "./Step.svelte";
+  import { database } from "../firebase/config";
+  import { get, ref } from "firebase/database"
+  import { onMount } from "svelte";
 
-  let steps = [
-    {
-      name: 'iBula',
-      icon: 'fa-solid fa-prescription-bottle-medical',
-      description: 'Aplicativo para consultas de bulas médicas com barra de pesquisa paginação e detalhes do medicamento e download e visualização da bula feito com',
-      stacks: 'ReactJS, NextJS, Bootstrap e Firebase.',
-      production: "https://ibula.vercel.app",
-      github: "https://github.com/dezoliveira/ibula"
-    },
-    {
-      name: 'Harpia Countries',
-      icon: 'fa-solid fa-map-location-dot',
-      description: 'Aplicativo para consultas de países no Google Maps e marcadores indicando cada país pesquisado, feito com',
-      stacks: 'VueJS, Vuex e Bootstrap.',
-      production: "https://harpia-countries.vercel.app",
-      github: "https://github.com/dezoliveira/harpia-countries"
-    },
-    {
-      name: 'Kompass',
-      icon: 'fa-regular fa-compass',
-      description: 'Aplicativo para consultas de usuários presentes em deterinado local no mapa, com uma listagem de usuários e um mapa do Google Maps. Feito com',
-      stacks: 'ReactJS e Tailwind CSS.',
-      production: "https://kompass-beige.vercel.app/",
-      github: "https://github.com/dezoliveira/kompass"
-    },
-    {
-      name: 'Vue Souls',
-      icon: 'fa-solid fa-khanda',
-      description: 'Aplicativo que utiliza uma API pública de armas do jogo Dark Souls. O app também utiliza o ChartJS para exibir gráficos. Feito com',
-      stacks: 'VueJS, ChartJS.',
-      production: "https://dezoliveira.github.io/vuesouls/",
-      github: "https://github.com/dezoliveira/vuesouls"
-    },
-    {
-      name: 'Love Calculator',
-      icon: 'fa-solid fa-heart',
-      description: 'Love Calculator é um projeto que utiliza uma API pública que calcula a combinação de duas pessoas através do seus nomes. Feito com',
-      stacks: ' HTML, CSS e Javascript',
-      production: "https://dezoliveira.github.io/love-calculator/",
-      github: "https://github.com/dezoliveira/love-calculator"
-    },
-    {
-      name: 'JS Calendar',
-      icon: 'fa-solid fa-calendar',
-      description: 'JSCalendar é um projeto de agendamento que utiliza um calendário para reservar horários e dias em poucos cliques. O app utiliza o local storage para reservar os agendamentos. Feito com',
-      stacks: 'HTML, CSS e Javascript.',
-      production: "https://dezoliveira.github.io/JSCalendar/",
-      github: "https://github.com/dezoliveira/JSCalendar"
-    },
-    {
-      name: 'Flexblog',
-      icon: 'fa-solid fa-blog',
-      description: 'Flexblog é um projeto que utiliza vários conceitos do Flexbox (CSS) como orientações, alinhamentos, crescimento e alocação dos blocos. Feito com',
-      stacks: 'HTML, CSS e Javascript.',
-      production: "https://dezoliveira.github.io/flexblog/",
-      github: "https://github.com/dezoliveira/flexblog"
-    },
-    {
-      name: 'Javascript Form',
-      icon: 'fa-solid fa-file-lines',
-      description: 'Javascript Form é um formulário que valida em tempo real se os campos preenchidos são válidos ou não. Foi o projeto que me fez entrar na área. Feito com',
-      stacks: 'HTML, CSS e Javascript.',
-      production: "https://dezoliveira.github.io/javascriptform/",
-      github: "https://github.com/dezoliveira/javascriptform"
-    },
-  ]
+  let projects = [{}]
+
+  onMount( async () => {
+    await loadProjects()
+  })
+
+  async function loadProjects() {
+    const projectsRef = ref(database, 'projects')
+
+    try{
+      // await new Promise(resolve => setTimeout(resolve, 3000))
+  
+      const snapshot = await get(projectsRef)
+  
+      if(snapshot.exists()) {
+        const projectsArray = Object.entries(snapshot.val()).map(([id, data]) => ({
+          id,
+          ...data
+        }))
+
+        projects = projectsArray
+        
+        return projectsArray
+  
+      } else {
+        console.log('error')
+      }
+      
+    } catch(err){
+      console.error(err);
+    }
+  }
 
   let benefits = [
     {name: 'um desenvolvedor front end criativo e detalhista', description: 'HTML, CSS e Javascript são a base de tudo e estou sempre reforçando a minha base.'},
@@ -120,16 +89,20 @@
       </button>
     </a>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      {#each steps as step}
-        <Step step={step}>
-          <p class="font-medium text-xl sm:text-1xl md:text-2xl">
-            {step.description}
-            <strong class="text-primary">
-              {step.stacks} 
-            </strong>
-          </p>
-        </Step>
-      {/each}
+      {#if projects !== undefined}
+        {#each projects as project}
+          <Step step={project}>
+            <p class="font-medium text-xl sm:text-1xl md:text-2xl">
+              {project.description}
+              <strong class="text-primary">
+                {project.stacks} 
+              </strong>
+            </p>
+          </Step>
+        {/each}
+      {:else}
+        <p>Loading...</p>
+      {/if}
     </div>
     <div class="stats shadow">
       <div class="stat">
