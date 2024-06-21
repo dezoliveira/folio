@@ -5,9 +5,11 @@
   import { onMount } from "svelte";
 
   let projects = undefined
+  let about = undefined
 
   onMount( async () => {
     await loadProjects()
+    await loadAbout()
   })
 
   async function loadProjects() {
@@ -37,11 +39,32 @@
     }
   }
 
-  let benefits = [
-    {name: 'um desenvolvedor front end criativo e detalhista', description: 'HTML, CSS e Javascript são a base de tudo e estou sempre reforçando a minha base.'},
-    {name: 'um frameworkholic', description: 'saber os conceitos de um framework é esscencial para desenvolver o front end de uma aplicação, esse é o meu diferencial.'},
-    {name: 'um ensinador e um aprendiz', description: 'ensinar e aprender são conceitos básicos da vida e eu levo isso sempre comigo.'},
-  ]
+  async function loadAbout() {
+    const aboutRef = ref(database, 'about')
+
+    try{
+      await new Promise(resolve => setTimeout(resolve, 3000))
+  
+      const snapshot = await get(aboutRef)
+  
+      if(snapshot.exists()) {
+        const aboutArray = Object.entries(snapshot.val()).map(([id, data]) => ({
+          id,
+          ...data
+        }))
+
+        about = aboutArray
+        
+        return aboutArray
+  
+      } else {
+        console.log('error')
+      }
+      
+    } catch(err){
+      console.error(err);
+    }
+  }
 
 </script>
 <main class="flex flex-col flex-1 sm:p-10 p-4">
@@ -155,19 +178,25 @@
     </div>
     <p class="mx-auto font-semibold text-lg sm:text-xl md:text-2xl">Eu sou...</p>
     <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
-      {#each benefits as benefit, index}
-        <div class="flex gap-6 sm:gap-8">
-          <p class="text-4xl sm:text-5xl md:text-6xl text-slate-50">
-            {index+1}
-          </p>
-          <div class="flex flex-col gap-6 sm:gap-8">
-            <h3 class="text-2xl sm:text-3xl md:text-5xl">
-              <p class="text-primary">{benefit.name}</p>
-            </h3>
-            <p class="text-1xl sm:text-2xl md:text-3xl">{benefit.description}</p>
+      {#if about !== undefined}
+        {#each about as about, index}
+          <div class="flex gap-6 sm:gap-8">
+            <p class="text-4xl sm:text-5xl md:text-6xl text-slate-50">
+              {index+1}
+            </p>
+            <div class="flex flex-col gap-6 sm:gap-8">
+              <h3 class="text-2xl sm:text-3xl md:text-5xl">
+                <p class="text-primary">{about.title}</p>
+              </h3>
+              <p class="text-1xl sm:text-2xl md:text-3xl">{about.description}</p>
+            </div>
           </div>
+        {/each}
+      {:else}
+        <div class="flex flex-col items-center justify-center w-full">
+          <span class="loading loading-spinner text-secondary w-[50px]"></span>
         </div>
-      {/each}
+      {/if}
     </div>
   </section>
 </main>
