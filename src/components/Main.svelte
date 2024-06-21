@@ -1,10 +1,10 @@
 <script>
-  import Step from "./Step.svelte";
+  import Projects from "./Projects.svelte";
   import { database } from "../firebase/config";
   import { get, ref } from "firebase/database"
   import { onMount } from "svelte";
 
-  let projects = [{}]
+  let projects = undefined
 
   onMount( async () => {
     await loadProjects()
@@ -88,22 +88,24 @@
         Ver Github
       </button>
     </a>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      {#if projects !== undefined}
+    {#if projects !== undefined}
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
         {#each projects as project}
-          <Step step={project}>
+          <Projects project={project}>
             <p class="font-medium text-xl sm:text-1xl md:text-2xl">
               {project.description}
               <strong class="text-primary">
                 {project.stacks} 
               </strong>
             </p>
-          </Step>
+          </Projects>
         {/each}
-      {:else}
-        <p>Loading...</p>
-      {/if}
-    </div>
+      </div>
+    {:else}
+      <div class="text-center">
+        <span class="loading loading-spinner text-secondary w-[50px]"></span>
+      </div>
+    {/if}
     <div class="stats shadow">
       <div class="stat">
         <div class="stat-figure text-primary">
